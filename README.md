@@ -49,8 +49,8 @@ If there’s a step where users go back to a previous step, it may indicate conf
 ## Data Cleaning and Merging
 - Dropped the client_id which were not assigned to a group (Test/Control)
 - Converted 'clnt_tenure_yr', 'clnt_tenure_mnth', 'clnt_age',  'num_accts', 'calls_6_mnth', 'logons_6_mnth' to int.
-- Merged Client Profiles and Digital Footprints using client_id to link user interactions with demographic data.
-- Combined the merged dataset with the Experiment Roster based on client_id to assign group labels and experiment details.
+- Merged Client Profiles and Experiment Roster based on client_id to assign group labels with demographic data.
+- Combined the merged dataset with the Digital Footprints  based on client_id to link user interactions.
 - The integrated dataset allowed analysis of user behavior and completion rates for both Test and Control groups.
 
 ## Project Structure
