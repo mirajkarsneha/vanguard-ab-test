@@ -13,11 +13,14 @@ Objective: The goal was to determine if the new design would lead to higher comp
 Did the new UI lead to higher completion rates?
 The analysis focuses on comparing the completion rates between the new (Test) and old (Control) designs to evaluate the effectiveness of the changes.
 
-### KPI 1: Completion Rate: The proportion of users who reach the final ‘confirm’ step
+### KPI 1: Completion Rate
+The proportion of users who reach the final ‘confirm’ step.
 
 ### KPI 2 : Time Spent on Each Step
+The average duration users spend on each step.
 
 ### KPI 3 : Error Rates
+If there’s a step where users go back to a previous step, it may indicate confusion or an error. You should consider moving from a later step to an earlier one as an error.
 
 ## Hypothesis 1 : Completion Rate
 #### H0: There is no significant difference in the completion rates between the Test and Control groups.
@@ -44,12 +47,11 @@ The analysis focuses on comparing the completion rates between the new (Test) an
 - Presentation link - https://docs.google.com/presentation/d/1uMW45RJiZBBCC8guZ9g5GpOMTubpT_Pn/edit#slide=id.p11
 
 ## Data Cleaning and Merging
-- Removed duplicates and irrelevant columns.
-- Handled missing values by applying imputation strategies or filtering out incomplete records.
-- Standardized date formats and ensured consistency across datasets.
-- Merged Client Profiles and Digital Footprints using visitor_id to link user interactions with demographic data.
-- Combined the merged dataset with the Experiment Roster based on visitor_id to assign group labels and experiment details.
-- The integrated dataset allows analysis of user behavior and completion rates for both Test and Control groups.
+- Dropped the client_id which were not assigned to a group (Test/Control)
+- Converted 'clnt_tenure_yr', 'clnt_tenure_mnth', 'clnt_age',  'num_accts', 'calls_6_mnth', 'logons_6_mnth' to int.
+- Merged Client Profiles and Digital Footprints using client_id to link user interactions with demographic data.
+- Combined the merged dataset with the Experiment Roster based on client_id to assign group labels and experiment details.
+- The integrated dataset allowed analysis of user behavior and completion rates for both Test and Control groups.
 
 ## Project Structure
 This is a python project has below mentioned files.
