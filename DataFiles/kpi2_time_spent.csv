@@ -1,0 +1,6 @@
+Step,Test Group (Avg Time),Control Group (Avg Time)
+start,2.45,2.53
+step_1,0.63,0.72
+step_2,0.8,0.64
+step_3,1.62,1.55
+confirm,2.15,2.14
